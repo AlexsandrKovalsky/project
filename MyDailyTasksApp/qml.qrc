@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BurningTasksTab.qml</file>
+        <file>CalendarTab.qml</file>
+        <file>ImportantTasksTab.qml</file>
+    </qresource>
+</RCC>

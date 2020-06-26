@@ -1,0 +1,27 @@
+#ifndef DATABASEMANAGER_H
+#define DATABASEMANAGER_H
+
+#include <QObject>
+#include <QtSql>
+
+class DatabaseManager : public QObject
+{
+    Q_OBJECT
+public:
+    explicit DatabaseManager(QObject *parent = nullptr);
+    Q_INVOKABLE void foo();
+    Q_INVOKABLE void addTask(const QString& description, 
+                             bool completed, int importance, const QString& date);
+    Q_INVOKABLE void updateTask(const QString& decsription,
+                                bool completed, int importance, const QString& date);
+    Q_INVOKABLE void updateTask(bool completed);
+    
+signals:
+    
+private:
+    QSqlDatabase m_database;
+    QSqlQuery m_query;
+
+};
+
+#endif // DATABASEMANAGER_H
